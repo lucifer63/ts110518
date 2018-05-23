@@ -1,0 +1,42 @@
+html, body {
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+* {
+    position: inherit;
+    box-sizing: inherit;
+}
+
+.test-tbl {
+    margin-bottom: 1em;
+}
+.test-tbl > tbody > tr:first-child > td:first-child {
+    height: 1.25em;
+    position: relative;
+}
+.test-tbl > tbody > tr:first-child > td:first-child > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 5px 15px white;
+    border: 1px solid;
+    white-space: pre;
+    background: white;
+    display: none;
+    z-index: 10;
+}
+.test-tbl > tbody > tr:first-child > td:first-child > span:hover + div,
+.test-tbl > tbody > tr:first-child > td:first-child > div:hover {
+    display: block;
+}
+.test-tbl > tbody > tr:not(:first-child) > td:first-child {
+    padding-left: 2em;
+    white-space: pre-wrap;
+}
+.test-tbl > tbody > tr > td:nth-child(2) {
+    padding: 0 1em;
+}
+.test-tbl > tbody > tr > td.error {
+    color: red;
+}
